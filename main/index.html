@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>秦皇岛天气分析可视化</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="javascript:void(0);" id="link-home" class="active">主页</a>
+    <a href="javascript:void(0);" id="link-temperature-analysis">气温天气分析</a>
+    <a href="javascript:void(0);" id="link-air-quality-analysis">空气质量分析</a>
+    <a href="javascript:void(0);" id="link-wind-analysis">风向分析</a>
+    <a href="javascript:void(0);" id="link-correlation-analysis">聚类分析</a>
+</div>
+
+<div class="content">
+    <div id="home">
+    <section class="project-introduction">
+        <h2>欢迎来到秦皇岛天气分析可视化</h2>
+        <p>我们非常高兴地向大家介绍我们的比赛项目——《秦皇岛天气与环境可视化》。在当前全球气候变化的背景下，了解和分析特定地区的气候特性对于促进环境保护和改善人们的生活质量具有重要意义。秦皇岛，这个位于中国北方的美丽城市，拥有其独特的气候和环境特征。我们的项目致力于通过数据可视化技术，将秦皇岛的静态气象和环境数据转换为直观易懂的视觉表现形式，旨在提升公众对当地气候环境的认识和理解。</p>
+        <h3>项目亮点包括：</h3>
+        <ul>
+            <li><strong>气温数据分析：</strong>展示了秦皇岛过往的温度变化，包括最高温度、最低温度和平均温度，直观展现温度的季节性变化和长期趋势。</li>
+            <li><strong>天气状况概览：</strong>提供了晴天、多云、雨天等不同天气类型的统计分析，帮助用户了解当地的天气模式。</li>
+            <li><strong>风力风向分析：</strong>详细展示了秦皇岛的风力和风向数据，分析了不同季节风力变化的特点和主要风向。</li>
+            <li><strong>空气质量与AQI评估：</strong>通过对AQI和各项污染物浓度的可视化分析，向用户展示了秦皇岛的空气质量状况和变化趋势。</li>
+            <li><strong>交互式数据探索：</strong>设计了交互式的图表和界面，让用户可以自行探索不同时间段内的气象和环境数据。</li>
+        </ul>
+    </section>
+</div>
+
+    <div id="temperature-analysis" class="analysis-container">
+        <h2>气温天气分析</h2>
+        <div class="chart"><iframe src="年度气温趋势图.html" title="年度气温趋势图"></iframe></div>
+        <div class="temperature-analysis-text">
+            <h3>气温趋势分析</h3>
+            <p>季节性波动：图表显示了明显的季节性气温波动，其中最高气温和最低气温均在每年的相同时期（夏季和冬季）达到峰值和谷值，这符合一般的季节性气候变化。</p>
+            <p>温差稳定性：最高气温和最低气温之间的温差在大多数年份中相对稳定，这表明日夜温差没有出现显著的长期变化。</p>
+            <p>温度范围：最高气温似乎在30°C左右达到峰值，而最低气温在-10°C左右达到谷值。这提供了该地区年温差的一个大致范围。</p>
+            <p>极端事件：如果存在尖峰或尖谷，它们可能表示极端天气事件。例如，图表上的尖峰可能代表热浪，而尖谷可能代表寒潮。不过，根据图表，这种极端事件似乎不常见。</p>
+            <p>长期趋势：图表没有显示出明显的长期气温上升或下降趋势。气温波动似乎主要是由季节变化引起的，而不是由更长期的气候变化趋势引起的。</p>
+            <p>年际变化：图表中的气温波动显示出一定的年际变异性，但没有明显的规律性变化趋势，这可能意味着其他气候因素在作用，如洋流变化、大气循环模式的年际波动等。</p>
+            <p>数据一致性：在整个时间序列中，数据的波动模式相对一致，这表明数据收集和处理的方法保持了一定的标准化。</p>
+        </div>
+        <div class="chart"><iframe src="历年气温折线图.html" title="历年气温折线图"></iframe></div>
+        <div class="chart"><iframe src="年度同年同月气温变化图.html" title="年度同年同月气温变化图"></iframe></div>
+        <div class="chart"><iframe src="年度气温箱线图.html" title="年度气温箱线图"></iframe></div>
+        <div class="chart"><iframe src="年度气温堆叠柱状图.html" title="年度气温堆叠柱状图"></iframe></div>
+        <div class="chart"><iframe src="气温日历热力图.html" title="气温日历热力图"></iframe></div>
+        <div class="chart"><iframe src="天气分布饼图.html" title="天气分布饼图"></iframe></div>
+        <div class="chart"><iframe src="热浪寒潮事件分析.html" title="热浪寒潮事件分析柱状图"></iframe></div>
+    </div>
+    <div id="air-quality-analysis" class="analysis-container">
+        <h2>空气质量分析</h2>
+        <div class="chart"><iframe src="年度AQI趋势图.html" title="年度AQI趋势图"></iframe></div>
+        <div class="chart"><iframe src="年度同年同月AQI变化图.html" title="年度同年同月AQI变化图"></iframe></div>
+        <div class="chart"><iframe src="历年AQI折线图.html" title="历年AQI折线图"></iframe></div>
+        <div class="chart"><iframe src="年度AQI箱线图.html" title="年度AQI箱线图"></iframe></div>
+        <div class="chart"><iframe src="年度天气污染等级饼图.html" title="年度天气污染等级饼图"></iframe></div>
+        <div class="chart"><iframe src="空气质量天数统计图.html" title="空气质量天数统计图"></iframe></div>
+    </div>
+    <div id="wind-analysis" class="analysis-container">
+        <h2>风向分析</h2>
+        <div class="chart"><iframe src="每月风力图(矩阵版).html" title="月风力图(矩阵版)"></iframe></div>
+        <div class="chart"><iframe src="每月风力图.html" title="月风力图"></iframe></div>
+        <div class="chart"><iframe src="风向图.html" title="风向图"></iframe></div>
+</div>
+    <div id="correlation-analysis" class="analysis-container">
+    <h2>聚类分析</h2>
+    <div class="chart"><iframe src="气温与AQI气泡图.html" title="气温与AQI气泡图"></iframe></div>
+    <div class="chart"><iframe src="气温与AQI散点图.html" title="气温与AQI散点图"></iframe></div>
+    <div class="chart"><iframe src="http://127.0.0.1:8050/" title="散点矩阵图"></iframe></div>
+</div>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // 初始化显示主页内容
+    showOnly('home');
+
+    // 设置菜单项的点击事件
+    document.getElementById("link-home").addEventListener("click", function() {
+        showOnly('home');
+    });
+
+    document.getElementById("link-temperature-analysis").addEventListener("click", function() {
+        showOnly('temperature-analysis');
+    });
+
+    document.getElementById("link-air-quality-analysis").addEventListener("click", function() {
+        showOnly('air-quality-analysis');
+    });
+
+    document.getElementById("link-wind-analysis").addEventListener("click", function() {
+        showOnly('wind-analysis');
+    });
+
+    document.getElementById("link-correlation-analysis").addEventListener("click", function() {
+        showOnly('correlation-analysis');
+    });
+
+    function showOnly(analysisId) {
+        window.scrollTo(0, 0);
+
+        // 隐藏所有内容
+        document.querySelectorAll('.content > div').forEach(div => {
+            div.style.display = 'none';
+        });
+
+        // 显示选中的内容
+        const selectedAnalysis = document.getElementById(analysisId);
+        selectedAnalysis.style.display = 'block';
+
+        // 为选中的分析容器中的每个图表添加动画
+        const charts = selectedAnalysis.querySelectorAll('.chart');
+        charts.forEach((chart, index) => {
+            anime({
+                targets: chart,
+                opacity: [0, 1], // 透明度从0变化到1
+                translateY: [20, 0], // 从下方20px处移动到其正常位置
+                delay: anime.stagger(200, {start: 300}), // 每个图表动画之间的延迟时间
+                duration: 1500, // 动画持续时间
+                easing: 'easeOutExpo' // 缓动函数
+            });
+        });
+    }
+});
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</body>
+</html>
