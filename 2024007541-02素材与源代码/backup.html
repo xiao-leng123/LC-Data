@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>秦皇岛天气分析可视化</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="javascript:void(0);" id="link-home" class="active">主页</a>
+    <a href="javascript:void(0);" id="link-temperature-analysis">气温天气分析</a>
+    <a href="javascript:void(0);" id="link-air-quality-analysis">空气质量分析</a>
+    <a href="javascript:void(0);" id="link-wind-analysis">风向分析</a>
+    <a href="javascript:void(0);" id="link-correlation-analysis">聚类分析</a>
+</div>
+
+<div class="content">
+    <div id="home">
+    <section class="project-introduction">
+        <h2>欢迎来到秦皇岛天气分析可视化</h2>
+        <p>我们非常高兴地向大家介绍我们的比赛项目——《秦皇岛天气与环境可视化》。在当前全球气候变化的背景下，了解和分析特定地区的气候特性对于促进环境保护和改善人们的生活质量具有重要意义。秦皇岛，这个位于中国北方的美丽城市，拥有其独特的气候和环境特征。我们的项目致力于通过数据可视化技术，将秦皇岛的静态气象和环境数据转换为直观易懂的视觉表现形式，旨在提升公众对当地气候环境的认识和理解。</p>
+        <h3>项目亮点包括：</h3>
+        <ul>
+            <li><strong>气温数据分析：</strong>展示了秦皇岛过往的温度变化，包括最高温度、最低温度和平均温度，直观展现温度的季节性变化和长期趋势。</li>
+            <li><strong>天气状况概览：</strong>提供了晴天、多云、雨天等不同天气类型的统计分析，帮助用户了解当地的天气模式。</li>
+            <li><strong>风力风向分析：</strong>详细展示了秦皇岛的风力和风向数据，分析了不同季节风力变化的特点和主要风向。</li>
+            <li><strong>空气质量与AQI评估：</strong>通过对AQI和各项污染物浓度的可视化分析，向用户展示了秦皇岛的空气质量状况和变化趋势。</li>
+            <li><strong>交互式数据探索：</strong>设计了交互式的图表和界面，让用户可以自行探索不同时间段内的气象和环境数据。</li>
+        </ul>
+    </section>
+</div>
+
+    <div id="temperature-analysis" class="analysis-container">
+        <h2>气温天气分析</h2>
+        <div class="chart"><iframe src="年度气温趋势图.html" title="年度气温趋势图"></iframe></div>
+        <div class="temperature-analysis-text">
+            <h3>气温趋势分析</h3>
+            <p>季节性波动：图表显示了明显的季节性气温波动，其中最高气温和最低气温均在每年的相同时期（夏季和冬季）达到峰值和谷值，这符合一般的季节性气候变化。</p>
+            <p>温差稳定性：最高气温和最低气温之间的温差在大多数年份中相对稳定，这表明日夜温差没有出现显著的长期变化。</p>
+            <p>温度范围：最高气温似乎在30°C左右达到峰值，而最低气温在-10°C左右达到谷值。这提供了该地区年温差的一个大致范围。</p>
+            <p>极端事件：如果存在尖峰或尖谷，它们可能表示极端天气事件。例如，图表上的尖峰可能代表热浪，而尖谷可能代表寒潮。不过，根据图表，这种极端事件似乎不常见。</p>
+            <p>长期趋势：图表没有显示出明显的长期气温上升或下降趋势。气温波动似乎主要是由季节变化引起的，而不是由更长期的气候变化趋势引起的。</p>
+            <p>年际变化：图表中的气温波动显示出一定的年际变异性，但没有明显的规律性变化趋势，这可能意味着其他气候因素在作用，如洋流变化、大气循环模式的年际波动等。</p>
+            <p>数据一致性：在整个时间序列中，数据的波动模式相对一致，这表明数据收集和处理的方法保持了一定的标准化。</p>
+        </div>
+        <div class="chart"><iframe src="历年气温折线图.html" title="历年气温折线图"></iframe></div>
+        <div class="temperature-trend-analysis">
+            <h3>历年气温变化分析</h3>
+            <p><strong>气温变化：</strong>图中有三条折线，每条折线代表一年中每个月的平均气温。根据图例，蓝线代表某一年的平均气温，而红线和绿线可能代表其他两年的数据。</p>
+            <p><strong>季节性特征：</strong>所有折线都显示了明显的季节性波动，温度在中间月份（夏季）达到峰值，在两端的月份（冬季）下降至最低点，这与温带气候特征一致。</p>
+            <p><strong>温差比较：</strong>如果这三条折线分别代表不同年份，可以观察到一年中某些月份的温差较大，而另一些月份则相对稳定。例如，在图中的6月份和7月份，气温的峰值出现较大的年际变化。</p>
+            <p><strong>气温峰值和低值：</strong>通常夏季月份（6月、7月、8月）的平均气温最高，而冬季月份（12月、1月、2月）的平均气温最低。这三年中的最高气温似乎都出现在7月份，而最低气温出现在1月份。</p>
+            <p><strong>年际变化：</strong>比较不同年份的气温可以发现，一些年份在某些月份的气温较高或较低。这可能由多种因素导致，包括气候变化、大气循环模式的年际变异，如厄尔尼诺和拉尼娜现象等。</p>
+        </div>
+        <div class="chart"><iframe src="年度同年同月气温变化图.html" title="年度同年同月气温变化图"></iframe></div>
+        <div class="annual-temperature-trend-analysis">
+            <h3>全年气温趋势分析</h3>
+            <p><strong>季节性变化：</strong>每个月份的气温数据显示出明显的季节性波动，夏季气温高，冬季气温低，符合温带气候特征。</p>
+            <p><strong>月间温差：</strong>过渡季节（春季和秋季）的月间温差较大，而夏季和冬季的日夜温差则相对稳定。</p>
+            <p><strong>气温趋势：</strong>连续年份的气温趋势可以观察到可能的全球气候变化影响，以及特定年份的气候异常。</p>
+            <p><strong>极端气候事件：</strong>折线图中的尖峰或尖谷可能指示某月的极端气温事件，如热浪或寒流。</p>
+            <p><strong>长期气温变化：</strong>多年数据的观察可以揭示长期的气温变化趋势，判断气温是上升、下降还是相对稳定。</p>
+        </div>
+        <div class="chart"><iframe src="年度气温箱线图.html" title="年度气温箱线图"></iframe></div>
+        <div class="annual-temperature-distribution-analysis">
+            <h3>历年气温分布状况分析</h3>
+            <p><strong>数据表示：</strong>箱线图通过箱体和触须展示了每个月份气温的分布情况。箱体的上下界表示了四分位数范围，箱体中间的横线代表中位数。</p>
+            <p><strong>季节性特征：</strong>各月份的箱体宽度反映了气温分布的波动范围，宽箱体表示该月气温变化大，狭窄箱体则表示气温相对稳定。</p>
+            <p><strong>极端气候指示：</strong>箱线图外的异常点可能代表极端的气温变化，如寒流或热浪。</p>
+            <p><strong>月间比较：</strong>通过对比不同月份的箱线图，可以观察到季节变化对气温的影响，例如冬季月份气温箱体普遍较低，而夏季则较高。</p>
+        </div>
+        <div class="chart"><iframe src="年度气温堆叠柱状图.html" title="年度气温堆叠柱状图"></iframe></div>
+        <div class="temperature-analysis">
+            <h3>历年气温堆叠柱状图分析</h3>
+            <p>这张图表以堆叠柱状图的形式展示了历年各月份的气温分布情况。通过不同颜色的段落，我们可以看到每月的最高、平均和最低气温，其中：</p>
+            <ul>
+                <li><strong>蓝色部分：</strong>代表每月的最低气温，显示出年度最冷日的温度。</li>
+                <li><strong>红色部分：</strong>展示了平均气温，反映出月度气温的一般情况。</li>
+                <li><strong>绿色部分：</strong>表示最高气温，突出了热浪或异常高温的日子。</li>
+            </ul>
+            <p>图表显示夏季月份（特别是6至8月）的柱状图段显著高于其他月份，表明这些月份气温较高。相反，冬季月份（12月至次年2月）的柱状图段较低，指示气温较低。这反映了秦皇岛明显的季节性温差。</p>
+            </div>
+        <div class="chart"><iframe src="气温日历热力图.html" title="气温日历热力图"></iframe></div>
+        <div class="calendar-heatmap-analysis">
+            <h3>气温日历热力图分析</h3>
+            <p>历年的气温日历热力图以颜色深浅直观展示了全年的气温变化。图中颜色的渐变清晰地反映了季节性的温度差异，尤其是在夏季和冬季。气温稳定性和可能的极端天气事件可通过颜色的均匀性和不均匀性识别。整体上，这张图表提供了一个易于理解的年度气温分布视图，对分析秦皇岛的气候模式大有裨益。</p>
+        </div>
+        <div class="chart"><iframe src="天气分布饼图.html" title="天气分布饼图"></iframe></div>
+        <div class="weather-type-pie-chart-analysis">
+            <h3><strong>天气类型饼图分析</strong></h3>
+            <p><strong>天气类型概览：</strong>所有年份晴朗天气比例占据饼图的最大部分，显示晴天是最常见的天气。</p>
+            <p><strong>次要天气类型：</strong>多云天气占比次之，是第二常见的天气状况。阴天和小雨也相对常见。</p>
+            <p><strong>极端天气事件：</strong>极端天气如大雨、小雪在饼图中所占比例很小，表明这类天气不常发生。</p>
+            <p><strong>总结：</strong>年秦皇岛以晴朗和多云的天气为主，其他天气类型出现较少，极端天气事件则较为罕见。</p>
+        </div>
+        <div class="chart"><iframe src="热浪寒潮事件分析.html" title="热浪寒潮事件分析柱状图"></iframe></div>
+        <div class="heatwave-coldwave-duration-analysis">
+            <h3><strong>秦皇岛热浪和寒潮持续时间分析</strong></h3>
+            <p><strong>数据表示：</strong>红色柱状表示热浪的持续时间，蓝色柱状表示寒潮的持续时间，Y轴可能代表持续的天数。</p>
+            <p><strong>热浪分析：</strong>夏季月份的红色柱状较高，说明热浪在这些月份持续时间较长。</p>
+            <p><strong>寒潮分析：</strong>冬季月份蓝色柱状较高，指出寒潮在这些时段持续时间较长。</p>
+            <p><strong>年度比较：</strong>不同年份的数据变化揭示了热浪和寒潮的频率及持续时间可能与长期气候模式有关。</p>
+            <p><strong>极端天气事件识别：</strong>持续时间较长的柱状图可帮助识别极端天气事件，对气候研究和应急准备至关重要。</p>
+        </div>
+    </div>
+    <div id="air-quality-analysis" class="analysis-container">
+        <h2>空气质量分析</h2>
+        <div class="chart"><iframe src="年度AQI趋势图.html" title="年度AQI趋势图"></iframe></div>
+        <div class="chart"><iframe src="年度同年同月AQI变化图.html" title="年度同年同月AQI变化图"></iframe></div>
+        <div class="chart"><iframe src="历年AQI折线图.html" title="历年AQI折线图"></iframe></div>
+        <div class="chart"><iframe src="年度AQI箱线图.html" title="年度AQI箱线图"></iframe></div>
+        <div class="chart"><iframe src="年度天气污染等级饼图.html" title="年度天气污染等级饼图"></iframe></div>
+        <div class="chart"><iframe src="空气质量天数统计图.html" title="空气质量天数统计图"></iframe></div>
+    </div>
+    <div id="wind-analysis" class="analysis-container">
+        <h2>风向分析</h2>
+        <div class="chart"><iframe src="每月风力图(矩阵版).html" title="月风力图(矩阵版)"></iframe></div>
+        <div class="monthly-wind-direction-analysis">
+            <h3><strong>月度风向图分析</strong></h3>
+            <p><strong>风向分布特征：</strong>每个扇形表示各个方向风的频率，扇形的大小反映了特定风向的常见程度。</p>
+            <p><strong>季节性风向变化：</strong>风向的季节性变化可能与温度和气压系统的变化有关，不同季节风的主导方向有明显差异。</p>
+            <p><strong>主导风向：</strong>特定月份中突出的扇形显示了主导风向，对于气候研究和相关活动规划非常重要。</p>
+            <p><strong>变化趋势：</strong>一年中的风向变化趋势可以揭示气候模式，对理解当地气候有重要意义。</p>
+        </div>
+        <div class="chart"><iframe src="每月风力图.html" title="月风力图"></iframe></div>
+        <div class="monthly-wind-direction-analysis">
+            <h3><strong>单月风向分布图分析</strong></h3>
+            <p><strong>风向频率：</strong>图中各方向的扇形大小代表该方向风出现的频率，角度越大表示频率越高。</p>
+            <p><strong>主导风向：</strong>较大的扇形指示了该月份的主导风向，这通常对气候条件有重要影响。</p>
+            <p><strong>风力变化：</strong>若图中采用颜色深浅表示风力强度，则颜色越深可能代表风力越强。</p>
+            <p><strong>季节性特征：</strong>扇形的方向可以反映季节性风向的变化，例如夏季可能主要是来自西南的热风，而冬季可能是来自东北的冷风。</p>
+            <p><strong>气候影响：</strong>风向的分布受到地形、大气压力系统和季节性气温变化等因素的综合影响。</p>
+        </div>
+        <div class="chart"><iframe src="风向图.html" title="风向图"></iframe></div>
+        <div class="annual-wind-direction-analysis">
+            <h3><strong>年度风向分布图分析</strong></h3>
+            <p><strong>风向频率：</strong>图中的扇形大小反映了特定方向风的出现频率，角度越大意味着该方向风越常见。</p>
+            <p><strong>主导风向：</strong>较大的扇形指出了该年度常见的风向，比如图中的东北和西南方向的风较为显著。</p>
+            <p><strong>风力强度：</strong>虽然图中未指明，但通常风力的强度可能会通过扇形的颜色深浅或层数来表示。</p>
+            <p><strong>季节性和月份变化：</strong>与月度风向图相比较，可以看出某些风向可能在特定季节更加突出。</p>
+            <p><strong>总结：</strong>该年度风向分布图为分析整个年度内的风向模式提供了直观的视图，有助于了解气候条件和季节变化。</p>
+        </div>
+</div>
+    <div id="correlation-analysis" class="analysis-container">
+    <h2>聚类分析</h2>
+    <div class="chart"><iframe src="气温与AQI气泡图.html" title="气温与AQI气泡图"></iframe></div>
+    <div class="temperature-aqi-bubble-chart-analysis">
+        <h3><strong>平均气温与AQI关系气泡图分析</strong></h3>
+        <p><strong>数据维度：</strong>图表的X轴表示气温（摄氏度），Y轴表示AQI值。气泡大小可能指代数据点的频率或其他变量。</p>
+        <p><strong>气温与AQI关系：</strong>气泡分布显示，在较冷和较热的气温下，AQI值较高，而在温和气温下，空气质量较好。</p>
+        <p><strong>季节性影响：</strong>在冬季较低温度和夏季较高温度区域，密集的气泡表明这些季节可能有更多空气质量较差的日子。</p>
+        <p><strong>极端天气与污染：</strong>极端气温的大型气泡可能表示极端气温与较高空气污染水平之间的相关性。</p>
+        <p><strong>总结：</strong>该图表直观地展示了气温如何影响空气质量，并暗示了空气质量与日常气温波动和季节性变化之间的联系。</p>
+    </div>
+    <div class="chart"><iframe src="气温与AQI散点图.html" title="气温与AQI散点图"></iframe></div>
+    <div class="temperature-aqi-scatterplot-analysis">
+        <h3><strong>平均气温与AQI散点图分析</strong></h3>
+        <p><strong>数据维度：</strong>X轴代表平均气温（摄氏度），而Y轴代表AQI值，展示了2020年秦皇岛不同温度下的空气质量状况。</p>
+        <p><strong>散点分布特征：</strong>散点在图表中呈现广泛分布，显示了在不同温度下AQI值的波动，未表现出明显的线性关系。</p>
+        <p><strong>空气质量与气温关系：</strong>低温区域和高温区域的散点较密集，可能指示着极端气温对空气质量的影响。</p>
+        <p><strong>总结：</strong>这张散点图为理解气温变化对空气质量的潜在影响提供了视角，显示了环境因素之间的复杂相互作用。</p>
+    </div>
+    <div class="chart"><iframe src="http://127.0.0.1:8050/" title="散点矩阵图"></iframe></div>
+    <div class="scatter-matrix-analysis">
+        <h3><strong>散点矩阵图分析</strong></h3>
+        <p><strong>气象因素间关系：</strong>展示了历年气温、AQI和风力之间的相互关系，揭示了这些气象变量可能的相互作用。</p>
+        <p><strong>气温与AQI：</strong>散点图未显示气温与AQI之间有明显的直接关系，表明AQI受多种环境因素影响。</p>
+        <p><strong>气温与风力：</strong>气温和风力之间也未见明显趋势，暗示风力变化不单单由气温直接决定。</p>
+        <p><strong>AQI与风力：</strong>在AQI较高的情况下，风力似乎有所增加，可能反映了风力在空气污染扩散中的作用。</p>
+        <p><strong>总结：</strong>历年秦皇岛的气象数据散点矩阵图提供了气候和空气质量相互关系的宝贵视角，有助于更深入地理解这些变量如何共同塑造环境条件。</p>
+    </div>
+</div>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // 初始化显示主页内容
+    showOnly('home');
+
+    // 设置菜单项的点击事件
+    document.getElementById("link-home").addEventListener("click", function() {
+        showOnly('home');
+    });
+
+    document.getElementById("link-temperature-analysis").addEventListener("click", function() {
+        showOnly('temperature-analysis');
+    });
+
+    document.getElementById("link-air-quality-analysis").addEventListener("click", function() {
+        showOnly('air-quality-analysis');
+    });
+
+    document.getElementById("link-wind-analysis").addEventListener("click", function() {
+        showOnly('wind-analysis');
+    });
+
+    document.getElementById("link-correlation-analysis").addEventListener("click", function() {
+        showOnly('correlation-analysis');
+    });
+
+    function showOnly(analysisId) {
+        window.scrollTo(0, 0);
+
+        // 隐藏所有内容
+        document.querySelectorAll('.content > div').forEach(div => {
+            div.style.display = 'none';
+        });
+
+        // 显示选中的内容
+        const selectedAnalysis = document.getElementById(analysisId);
+        selectedAnalysis.style.display = 'block';
+
+        // 为选中的分析容器中的每个图表添加动画
+        const charts = selectedAnalysis.querySelectorAll('.chart');
+        charts.forEach((chart, index) => {
+            anime({
+                targets: chart,
+                opacity: [0, 1], // 透明度从0变化到1
+                translateY: [20, 0], // 从下方20px处移动到其正常位置
+                delay: anime.stagger(200, {start: 300}), // 每个图表动画之间的延迟时间
+                duration: 1500, // 动画持续时间
+                easing: 'easeOutExpo' // 缓动函数
+            });
+        });
+    }
+});
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</body>
+</html>
